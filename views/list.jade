@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1= title
+	ul
+		each parkingLot, index in parking
+			- parkingLot = parkingLot.getInformation()
+			li= parkingLot.number + ': ' + parkingLot.origin + '-' + parkingLot.destination
